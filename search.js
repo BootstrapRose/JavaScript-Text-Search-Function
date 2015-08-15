@@ -1,13 +1,14 @@
-jshint multistr:true
+// jshint multistr:true
 
-var text = "skdfjdsf ROse sdlkfjsdkfj \ ROSE dskfjdskf Rose KJDFKLJDSF \ kdsjfkd fjjfsj ksksk rose?";
+var text = "skdfjdsf ROse sdlkfjsdkfj ROSE dskfjdskf Rose KJDFKLJDSF kdsjfkd fjjfsj ksksk rose? Rose";
 var myName = "Rose";
 var hits=[];
 
-for (i = 0; i < text.length; i++) {
-    if (myName[0] === text[i]){
+for (var i = 0; i < text.length; i++) {
+    if (text[i] === myName[0]) {
         for (var j = i; j < (myName.length + i); j++){
             hits.push(text[j]);
         }
     }
 }
+
